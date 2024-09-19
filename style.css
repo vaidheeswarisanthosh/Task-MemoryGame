@@ -1,0 +1,148 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f5e8ba;
+    width: 90%;
+    
+}
+.container{
+    margin-top: 80px;
+    
+}
+
+h3{
+    font-size:2rem;
+    text-align: center;
+    color:rgb(187, 33, 154);
+    
+}
+header{
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.game{
+    display:grid;
+    margin:40px auto;
+    grid-template-columns: repeat(4,120px);
+    grid-row-gap:2em;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameBoard div{
+    height:100px;
+    width:70px;
+    border:2px solid rgb(151, 151, 202);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2em;
+    color:brown;
+    background-color: #e5e5f7;
+}
+
+.cardback{
+    background-color: #b3b3da;
+    opacity: 0.8;
+    background-image:  linear-gradient(135deg, #d0d1ec 25%, transparent 25%), linear-gradient(225deg, #d0d1ec 25%, transparent 25%), linear-gradient(45deg, #d0d1ec 25%, transparent 25%), linear-gradient(315deg, #d0d1ec 25%, #e5e5f7 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
+}
+
+#gameBoard div:hover{
+    cursor:pointer;
+}
+
+.won{
+    font-size:3em;
+    display:flex;
+    justify-content:center;
+    height:500px;
+    align-items: center;
+    color:blue;
+    width:500px;
+    margin:0px auto;
+}
+
+
+
+    
+
+
+@media (min-width: 768px) {
+    #gameBoard {
+        grid-template-columns: repeat(4, 1fr); /* 4x4 grid on desktop */
+        gap: 8px;
+        width:40%;
+    }
+    
+    .cardback {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    #gameBoard {
+        grid-template-columns: repeat(3, 1fr); /* 3x4 grid on mobile portrait mode */
+        gap: 8px;
+        width:40%
+    }
+    
+    .cardback {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    #gameBoard {
+        grid-template-columns: repeat(2, 1fr); /* 2x4 grid for small screens */
+        gap: 8px;
+        width:40%
+    }
+    
+    .cardback {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 300px) {
+    #gameBoard {
+        grid-template-columns: repeat(1, 1fr); /* 1x4 grid for small screens */
+        gap: 8px;
+        width:40%;
+    }
+    
+    .cardback {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #gameBoard {
+        grid-template-columns: repeat(6, 1fr); /* 6x4 grid for larger screens */
+        width: 40%;
+        gap:8px;
+        
+        
+    }
+}
